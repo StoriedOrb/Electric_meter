@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.539
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Electric meter", "Electric meter\Electric meter.csproj", "{ECB1567C-90FA-4D61-BDD4-F51208B0ACF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Electric meter", "Electric meter.csproj", "{ECB1567C-90FA-4D61-BDD4-F51208B0ACF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A29E61A7-91E3-4B4B-B37C-ABE5DF7AE696}
+		SolutionGuid = {CDAC34D1-1A7A-46BA-BBED-BE45076A8762}
 	EndGlobalSection
 EndGlobal

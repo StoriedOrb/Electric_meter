@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Electric_meter
 {
-    public partial class Form1 : Form
+    public partial class ElectricMeter : Form
     {
-        public Form1()
+        public ElectricMeter()
         {
             InitializeComponent();
         }
@@ -47,32 +47,84 @@ namespace Electric_meter
                 if (BeginElecint < 0)
                 {
                     MessageBox.Show("Значение не может быть отрицательным!");
-                    BeginMonth = -BeginElecint.ToString();
-                }
-                if (EndElecint < 0)
-                {
-                    MessageBox.Show("Значение не может быть отрицательным!");
-                    EndMonth.Clear();
-                }
-                if (BeginElecint > EndElecint)
-                {
-                    MessageBox.Show("Показания в начале месяца не могут быть больше, чем в конце! ");
+
                     BeginMonth.Clear();
                     EndMonth.Clear();
+                    Cost.Clear();
+                    Wasted.Clear();
                 }
+                
                 if (BeginElecint > EndElecint)
                 {
-                    MessageBox.Show("Показания в начале месяца не могут быть больше, чем в конце! ");
+                    MessageBox.Show("Показания в начале месяца не могут быть больше, чем в конце!");
+                    
                     BeginMonth.Clear();
                     EndMonth.Clear();
+                    Cost.Clear();
+                    Wasted.Clear();
                 }
 
             }
             else
             {
-                MessageBox.Show("");
+                MessageBox.Show("Значение не целое, либо в нём содержатся буквы!");
+
+                BeginMonth.Clear();
+                EndMonth.Clear();
+                Cost.Clear();
+                Wasted.Clear();
+            }
+
+            if (Right2 == true) 
+            {
+                if (EndElecint < 0)
+                {
+                    MessageBox.Show("Значение не может быть отрицательным!");
+
+                    BeginMonth.Clear();
+                    EndMonth.Clear();
+                    Cost.Clear();
+                    Wasted.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Значение не целое, либо в нём содержатся буквы!");
+
+                BeginMonth.Clear();
+                EndMonth.Clear();
+                Cost.Clear();
+                Wasted.Clear();
             }
             
+            int wasted; double cost;
+
+            wasted = EndElecint - BeginElecint;
+
+            if (wasted < 200)
+            {
+                cost = wasted * 2;
+
+                Cost.Text = cost.ToString();
+            }
+            if (wasted > 200)
+            {
+                int over;
+                cost = 200 * 2;
+                over = wasted - 200;
+                cost = (over * 2.5) + cost;
+                
+                Cost.Text = cost.ToString();
+            }
+            Wasted.Text = wasted.ToString();
+            
+            
+
+
+
+
+
+
         }
 
         private void Clear_Click(object sender, EventArgs e)

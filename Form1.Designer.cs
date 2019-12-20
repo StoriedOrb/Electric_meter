@@ -1,6 +1,6 @@
 ﻿namespace Electric_meter
 {
-    partial class Form1
+    partial class ElectricMeter
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ElectricMeter));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.EndMonth = new System.Windows.Forms.TextBox();
             this.BeginMonth = new System.Windows.Forms.TextBox();
@@ -177,7 +177,7 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // ElectricMeter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,8 +189,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ElectricMeter";
+            this.Text = "Electric Meter";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
